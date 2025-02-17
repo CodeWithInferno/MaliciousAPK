@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: apkutils3
+Version: 2.0.14
+Summary: Utils for parsing apk. Type hinting supported.
+Home-page: https://github.com/Young-Lord/apkutils3
+License: MIT
+Keywords: apk,dex,axml,arsc,android
+Author: LY
+Author-email: ly-niko@qq.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Provides-Extra: cert
+Requires-Dist: cigam (>=0.0.3,<0.0.4)
+Requires-Dist: pyelftools (>=0.30,<0.31)
+Requires-Dist: xmltodict (>=0.13.0,<0.14.0)
+Project-URL: Bug Tracker, https://github.com/Young-Lord/apkutils3/issues
+Project-URL: Repository, https://github.com/Young-Lord/apkutils3
+Description-Content-Type: text/markdown
+
+# apkutils3 [![PyPI version](https://badge.fury.io/py/apkutils3.svg)](https://badge.fury.io/py/apkutils3) [![GitHub license](https://img.shields.io/github/license/Young-Lord/apkutils3.svg)](https://github.com/Young-Lord/apkutils3/blob/master/LICENSE)
+
+A library that gets infos from APK.
+
+Type hinting added for many functions.
+
+Many getter functions are replaced by properties.
+
+## Install and Test
+
+```shell
+pip install apkutils3
+```
+
+## Usage
+
+```shell
+$ python3 -m apkutils -h
+usage: apkutils [-h] [-m] [-s] [-f] [-c] [-V] p
+
+positional arguments:
+  p              path
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -m             Show manifest
+  -s             Show strings
+  -f             Show files
+  -c             Show certs
+  -V, --version  show program's version number and exit
+```
+
+GUI tool
+
+```shell
+$ python -m apkutils.gui
+# Click Bind
+```
+
+Right click an `*.apk` file. Select `APK Parser`. You will see
+
+![apk parser example image](imgs/apk-parser.png)
+
+## Reference
+
+- apkutils\axml from [kin9-0rz/axmlparser](https://github.com/kin9-0rz/axmlparser) ![Project unmaintained](https://img.shields.io/badge/project-unmaintained-red.svg)
+- apkutils\dex from [Storyyeller/enjarify](https://github.com/Storyyeller/enjarify) ![Project unmaintained](https://img.shields.io/badge/project-unmaintained-red.svg), license under Apache License 2.0.
+- Original projects: [apkutils2](https://github.com/codeskyblue/apkutils2)  ![Project unmaintained](https://img.shields.io/badge/project-unmaintained-red.svg), [apkutils](https://github.com/kin9-0rz/apkutils), license under MIT License.
+- [LibChecker](https://github.com/LibChecker/LibChecker) used for classes list generation, license under Apache License 2.0.
+
